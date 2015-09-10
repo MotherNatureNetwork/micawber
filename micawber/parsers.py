@@ -11,7 +11,7 @@ try:
 except ImportError:
     try:
         from bs4 import BeautifulSoup
-        bs_kwargs = replace_kwargs = {'features': 'html.parser'}
+        bs_kwargs = replace_kwargs = {'features': 'lxml'}
     except ImportError:
         BeautifulSoup = None
 
