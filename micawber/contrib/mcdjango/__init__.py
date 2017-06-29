@@ -35,11 +35,11 @@ def django_template_handler(url, response_data, **params):
     return mark_safe(
         render_to_string(
             template_names,
-            template.Context({
+            {
                 'params': params,
                 'response': response_data,
                 'url': url,
-            })).strip())
+            }).strip())
 
 def fix_width_height(width_height, params):
     if width_height:
